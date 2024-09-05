@@ -1,3 +1,7 @@
 README.md
 git_push.sh
 .travis.yml
+
+# modified code - handle with care
+src/apis/mod.rs
+src/apis/configuration.rs
