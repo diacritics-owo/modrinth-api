@@ -31,7 +31,7 @@ for await (const entry of Deno.readDir(`${output}/src/apis`)) {
       .replaceAll('id|number', 'term_3')
       .replaceAll('models::models', 'models')
       .replaceAll('models::serde_json', 'serde_json')
-      .replaceAll('data.to_string()', 'serde_json::to_string(&data).unwrap()')
+      .replaceAll('data.to_string()', 'serde_json::to_string(&data)?')
   );
 }
 

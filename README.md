@@ -4,7 +4,7 @@ A client library for the Modrinth API, generated with openapi-generator
 
 ## Getting Started
 
-The version of this library corresponds directly to the version of the Modrinth API. The earliest supported version is 2.7.0.
+The major and minor versions of this library correspond directly to the version of the Modrinth API (the patch version may be separate). The earliest supported version of the API is 2.7.0.
 
 ## Documentation
 
