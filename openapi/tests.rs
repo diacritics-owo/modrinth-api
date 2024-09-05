@@ -1,5 +1,3 @@
-pub use openapi::*;
-
 #[cfg(test)]
 mod tests {
   use super::*;

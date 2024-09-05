@@ -1,2 +1,6 @@
-/target
-/generated
+target
+.openapi-generator
+docs
+src
+.travis.yml
+git_push.sh

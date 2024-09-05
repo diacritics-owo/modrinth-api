@@ -1,10 +1,20 @@
 [package]
 name = "modrinth-api"
-version = "0.1.0"
+version = "2.7.0"
+authors = ["support@modrinth.com"]
+description = "A client library for the Modrinth API, generated with openapi-generator"
+# Override this license by providing a License Object in the OpenAPI.
+license = "Unlicense"
 edition = "2021"
 
 [dependencies]
-openapi = { path = "generated" }
+serde = { version = "^1.0", features = ["derive"] }
+serde_with = { version = "^3.8", default-features = false, features = ["base64", "std", "macros"] }
+serde_json = "^1.0"
+serde_repr = "^0.1"
+url = "^2.5"
+uuid = { version = "^1.8", features = ["serde", "v4"] }
+reqwest = { version = "^0.12", features = ["json", "multipart"] }
 
 [dev-dependencies]
 tokio = { version = "1.40.0", features = ["macros"] }
