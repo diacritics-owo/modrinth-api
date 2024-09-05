@@ -2,3 +2,4 @@ repository = "https://github.com/diacritics-owo/modrinth-api"
 readme = "README.md"
 keywords = ["modrinth", "api", "minecraft"]
 categories = ["api-bindings"]
+exclude = ["openapi", "docs"]
