@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "gen": "deno run --allow-run --allow-read --allow-write openapi/gen.ts"
+  }
+}
