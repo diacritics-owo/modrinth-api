@@ -36,10 +36,16 @@ for await (const entry of Deno.readDir(`${output}/src/apis`)) {
 }
 
 await process(`${output}/Cargo.toml`, async (source) =>
-  `${source}\n${await Deno.readTextFile(`${openapi}/deps.toml`)}`.replace(
-    /(?<=description = ").*(?=")/g,
-    'A client library for the Modrinth API, generated with openapi-generator'
-  )
+  `${source}\n${await Deno.readTextFile(`${openapi}/dependencies.toml`)}`
+    .replace(
+      /(?<=description = ").*(?=")/g,
+      'A client library for the Modrinth API, generated with openapi-generator'
+    )
+    .replace(/(?<=license = ").*(?=")/g, 'CC0-1.0')
+    .replace(
+      /(?<=\[package\]\n)/,
+      await Deno.readTextFile(`${openapi}/package.toml`)
+    )
 );
 
 await process(
@@ -50,5 +56,6 @@ await process(
 
 await process(
   `${output}/.gitignore`,
-  async (_) => `target\n.openapi-generator\ndocs\nsrc\n.travis.yml\ngit_push.sh`
+  async (_) =>
+    `target\n.openapi-generator\ndocs\nsrc\n.travis.yml\ngit_push.sh\nCargo.toml\nCargo.lock`
 );

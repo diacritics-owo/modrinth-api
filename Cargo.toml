@@ -1,10 +1,14 @@
 [package]
+repository = "https://github.com/diacritics-owo/modrinth-api"
+readme = "README.md"
+keywords = ["modrinth", "api", "minecraft"]
+categories = ["api-bindings"]
 name = "modrinth-api"
 version = "2.7.0"
 authors = ["support@modrinth.com"]
 description = "A client library for the Modrinth API, generated with openapi-generator"
 # Override this license by providing a License Object in the OpenAPI.
-license = "Unlicense"
+license = "CC0-1.0"
 edition = "2021"
 
 [dependencies]
